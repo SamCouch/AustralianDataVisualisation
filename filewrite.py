@@ -9,15 +9,19 @@ url1 = 'https://raw.githubusercontent.com/SamCouch/AustralianDataVisualisation/m
 url2 = 'https://raw.githubusercontent.com/SamCouch/AustralianDataVisualisation/master/SA2/2016Census_G02_AUS_SA2.csv'
 url3 = 'https://raw.githubusercontent.com/SamCouch/AustralianDataVisualisation/master/SA2/2016Census_G14_AUS_SA2.csv'
 url4 = 'https://raw.githubusercontent.com/SamCouch/AustralianDataVisualisation/master/SA2/2016Census_G15_AUS_SA2.csv'
-
+url5 = 'https://raw.githubusercontent.com/SamCouch/AustralianDataVisualisation/master/shape/SA2_2016_AUST.shp'
 # Read csvs
 df_dat1 = pd.read_csv(url1, error_bad_lines=False)
 df_dat2 = pd.read_csv(url2, error_bad_lines=False)
 df_dat3 = pd.read_csv(url3, error_bad_lines=False)
 df_dat4 = pd.read_csv(url4, error_bad_lines=False)
 
+
+
+# NOTE THIS MAY NEED TO HAVE SHAPEFILE DIRECTORY ADDED IF DOWNLOADED FROM GITHUB
 # Read Shapefile
-df_shp = gpd.read_file('C:/Users/Taran/Documents/abstat2/shape/SA2_2016_AUST.shp')
+df_shp = gpd.read_file('shape/SA2_2016_AUST.shp')
+
 
 
 # Merge Datafreames
